@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)](https://app.netlify.com/sites/github-battle-js/deploys)
+
 # book-it
 BookIt React App allows users to search from a catalog of books and save choices to various books shelves.
 It's built with React & React Router.
@@ -5,25 +7,41 @@ It's built with React & React Router.
 - Want to Read
 - Read
 
+#Stack
+- React v16
+- React Hooks
+- React Context
+- React Router v5
+- Functional Components
+- ES6 Class Definitions
+
 ## Application Tree
 ```bash
 ├── CONTRIBUTING.md
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
+├── README.md - # This file.
+├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use BookIT app.
+├── package.json # npm package manager file.
+└── app
+    ├── components
+    │   ├── Books.js #
+    │   ├── Bookshelf.js #
+    │   ├── BookshelfChanger.js #
+    │   ├── ListBooks.js #
+    │   ├── SearchBooks.js #
+    │   ├── SearchBookInputs.js #
+    │   ├── SearchResults.js #
+    │   └── index.html #
+    ├── utils
+    │   ├── BooksAPI.js #
+    │   └── data.js #
+    ├── icons # icon images.
     │   ├── add.svg
     │   ├── arrow-back.svg
     │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
+    ├── index.html #
+    ├── favicon.ico #
+    ├── index.css # Global styles.
+    ├── index.test.js # Used for testing.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
@@ -71,9 +89,5 @@ search(query)
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend.
 
