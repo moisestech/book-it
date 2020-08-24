@@ -21,7 +21,7 @@ function App () {
           <div className='container'>
             <Switch>
               <Route exact path='/' component={BookIt} />
-              <Route render={() => <h1></h1>} />
+              <Route render={() => <h1>404</h1>} />
             </Switch>
           </div>
         </div>
