@@ -47,8 +47,8 @@ It's built with React & React Router.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-##Roadmap
-![CSS3 Bookshelf](https://fribly.com/2014/11/17/pure-css3-bookshelf-concept/)
+## Roadmap
+[CSS3 Bookshelf](https://fribly.com/2014/11/17/pure-css3-bookshelf-concept/)
 
 ## Npm install
 - npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin

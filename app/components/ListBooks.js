@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Bookshelf from './Bookshelf'
 
-export default ListBooks ({ bookshelves, books, onMove }) {
+export default function ListBooks ({ bookshelves, books, onMove }) {
   return (
     <div className='list-books'>
       <div className='list-books-title'>
