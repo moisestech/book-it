@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)](https://app.netlify.com/sites/github-battle-js/deploys)
 
 # book-it
-BookIt React App allows users to search from a catalog of books and save choices to various books shelves.
+BookIt - search from a catalog of books and save choices to various books shelves.
 It's built with React & React Router.
 - Currently Reading
 - Want to Read
@@ -31,6 +31,9 @@ It's built with React & React Router.
     │   ├── SearchBookInputs.js #
     │   ├── SearchResults.js #
     │   └── index.html #
+    ├── hooks
+    ├── contexts
+    │   └── theme.js #
     ├── utils
     │   ├── BooksAPI.js #
     │   └── data.js #
@@ -41,9 +44,15 @@ It's built with React & React Router.
     ├── index.html #
     ├── favicon.ico #
     ├── index.css # Global styles.
-    ├── index.test.js # Used for testing.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
+
+##Roadmap
+![CSS3 Bookshelf](https://fribly.com/2014/11/17/pure-css3-bookshelf-concept/)
+
+## Npm install
+- npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin
+
 
 ## Backend Server
 
