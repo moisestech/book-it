@@ -2,12 +2,11 @@
 
 # book-it
 BookIt - search from a catalog of books and save choices to various books shelves.
-It's built with React & React Router.
 - Currently Reading
 - Want to Read
 - Read
 
-#Stack
+# Stack
 - React v16
 - React Hooks
 - React Context
@@ -19,7 +18,6 @@ It's built with React & React Router.
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - # This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use BookIT app.
 ├── package.json # npm package manager file.
 └── app
     ├── components
@@ -36,6 +34,7 @@ It's built with React & React Router.
     │   └── theme.js #
     ├── utils
     │   ├── BooksAPI.js #
+    ├── ├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use BookIT app.
     │   └── data.js #
     ├── icons # icon images.
     │   ├── add.svg
@@ -44,7 +43,7 @@ It's built with React & React Router.
     ├── index.html #
     ├── favicon.ico #
     ├── index.css # Global styles.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
+    └── index.js # Webpack enters to start the main root of our app.
 ```
 
 ## Roadmap
