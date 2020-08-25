@@ -25,7 +25,8 @@ body, .app {
 
 .list-books-title {
   padding: 10px 0;
-  background: #2e7c31;
+  background-color: #9921e8;
+  background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
   text-align: center;
   height: 66px;
   width: 100%;
@@ -36,7 +37,7 @@ body, .app {
 }
 
 .list-books-title h1 {
-  font-weight: 400;
+  font-weight: lighter;
   margin: 0;
   color: white;
 }
@@ -75,7 +76,8 @@ body, .app {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #2e7d32;
+  background-color: #9921e8;
+  background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
   background-image: url('./icons/add.svg');
   background-repeat: no-repeat;
   background-position: center;
