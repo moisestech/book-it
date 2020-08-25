@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Bookshelf from './Bookshelf'
 
+
+
 export default function ListBooks ({ bookshelves, books, onMove }) {
   return (
     <div className='list-books'>
@@ -10,12 +12,13 @@ export default function ListBooks ({ bookshelves, books, onMove }) {
         <h1>BookIT</h1>
       </div>
       <div className='list-books-content' >
-        {bookshelves.map(shelf => (
+        {/*bookshelves && <pre>{JSON.stringify(bookshelves, null, 2)}</pre>*/}
+        {bookshelves.map((shelf, key) => (
+          //shelf && <pre key={key}>{JSON.stringify(shelf, null, 2)}</pre>
           <Bookshelf
             key={shelf.key}
             shelf={shelf}
             books={books}
-            onMove={onMove}
           />
         ))}
       </div>
@@ -28,8 +31,8 @@ export default function ListBooks ({ bookshelves, books, onMove }) {
   )
 }
 
-ListBooks.PropTypes = {
-  bookshelves: PropTypes.object.isRequired,
+ListBooks.propTypes = {
+  bookshelves: PropTypes.array.isRequired,
   books: PropTypes.array.isRequired,
-  onMove: PropsTypes.function.isRequired
+  // onMove: PropTypes.function
 }
