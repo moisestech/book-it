@@ -1,8 +1,8 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import { debounce } from 'throttle-debounce'
 import * as BooksAPI from '../utils/BooksAPI'
-// import ListBooks from './ListBooks'
+import ListBooks from './ListBooks'
 // import SearchBooks from './SearchBooks'
 
 
@@ -32,43 +32,49 @@ function myBooksReducer (state, action) {
 export default function Bookit () {
   const [myBooks, setMyBooks] = React.useState([])
   const [searchBooks, setSearchBooks] = React.useState([])
+  const [error, setError] = React.useState(false)
+
   const [state, dispatch] = React.useReducer(
     myBooksReducer,
     { error: null}
   )
 
+  // React.useEffect(() => {
+  //   BooksAPI.getAll()
+  //     .then((books) => dispatch({ type: 'success', books}))
+  //     .catch((error) => dispatch({ type: 'error', error }))
+  // }, [myBooks])
+
   React.useEffect(() => {
     BooksAPI.getAll()
-      .then((books) => dispatch({ type: 'success', books}))
-      .catch((error) => dispatch({ type: 'error', error }))
-  }, [myBooks])
+      .then((books) => setMyBooks(books))
+      .catch((error) => setError(error))
+  }, [myBooks, error])
 
+  const moveBook = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+      .catch((error) => {
+        console.log(error)
+        setError(error)
+      })
 
-
-  // React.useEffect(() => {
-
-  // }, [setSearchBooks])
-
+    console.log({ "book": book, "shelf": shelf })
+  }
 
   return (
     <>
-      {state.error && <div>Network error. Please try again later.</div>}
+      {error && <div>Network error. Please try again later.</div>}
       <div className="app">
 
           <div>List Books</div>
+          <ListBooks
+            bookshelves={bookshelves}
+            books={myBooks}
+          />
+
           <div>Search Books</div>
 
           {/*<Route
-            exact path="/"
-            component={
-              <ListBooks
-                bookshelves={bookshelves}
-                books={myBooks}
-                onMove={this.moveBook}
-              />
-            }
-          />
-          <Route
             path="/search"
             component={
               <SearchBooks
