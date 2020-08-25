@@ -13,7 +13,14 @@ const headers = {
 }
 
 
-// endpoints
+// The following endpoints are available:
+
+//     GET /status
+//     GET /books
+//     GET /books/:id
+//     PUT /books/:id { shelf }
+//     POST /search { query, maxResults }
+
 export const get = bookId =>
   fetch(`${api}/books/${bookId}`, { headers })
     .then(res => res.json())
