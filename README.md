@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7154ae-3298-48ca-9a2d-568f3091fc35/deploy-status)](https://app.netlify.com/sites/github-battle-js/deploys)
-
 # book-it
 BookIt - search from a catalog of books and save choices to various books shelves.
 - Currently Reading
