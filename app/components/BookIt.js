@@ -58,7 +58,18 @@ export default function Bookit () {
         setError(error)
       })
 
-    console.log({ "book": book, "shelf": shelf })
+      if (shelf === 'none') {
+        setMyBooks(prevMyBooks => ({
+          myBooks: prevMyBooks.myBooks.filter(b => b.id !== book.id)
+        }))
+      } else {
+        book.shelf = shelf
+        setMyBooks(prevMyBooks => ({
+          myBooks: prevMyBooks.myBooks.filter(b => b.id !== book.id).concat(book)
+        }))
+      }
+
+    // console.log({ "book": book, "shelf": shelf })
   }
 
   return (
@@ -75,18 +86,15 @@ export default function Bookit () {
 
           <div>Search Books</div>
 
-          {/*<Route
-            path="/search"
-            component={
-              <SearchBooks
-                searchBooks={searchBooks}
-                myBooks={myBooks}
-                onSearch={(searchForBooks) => null}
-                onMove={(moveBook) => null}
-                onResetSearch={(resetSearch) => null}
-              />
-            }
-          />*/}
+          <Route path="/search">
+            <SearchBooks
+              searchBooks={searchBooks}
+              myBooks={myBooks}
+              onSearch={(searchForBooks) => null}
+              onMove={moveBook}
+              onResetSearch={(resetSearch) => null}
+            />
+          </Route>
       </div>
     </>
   )
