@@ -1,9 +1,9 @@
 import React from 'react'
-// import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { debounce } from 'throttle-debounce'
 import * as BooksAPI from '../utils/BooksAPI'
 import ListBooks from './ListBooks'
-// import SearchBooks from './SearchBooks'
+import SearchBooks from './SearchBooks'
 
 
 const bookshelves = [
@@ -70,6 +70,7 @@ export default function Bookit () {
           <ListBooks
             bookshelves={bookshelves}
             books={myBooks}
+            onMove={(moveBook) => null}
           />
 
           <div>Search Books</div>
@@ -80,9 +81,9 @@ export default function Bookit () {
               <SearchBooks
                 searchBooks={searchBooks}
                 myBooks={myBooks}
-                onSearch={this.searchForBooks}
-                onMove={this.moveBook}
-                onResetSearch={this.resetSearch}
+                onSearch={(searchForBooks) => null}
+                onMove={(moveBook) => null}
+                onResetSearch={(resetSearch) => null}
               />
             }
           />*/}
