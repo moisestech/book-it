@@ -34,5 +34,5 @@ export default function ListBooks ({ bookshelves, books, onMove }) {
 ListBooks.propTypes = {
   bookshelves: PropTypes.array.isRequired,
   books: PropTypes.array.isRequired,
-  // onMove: PropTypes.function
+  onMove: PropTypes.func.isRequired
 }
