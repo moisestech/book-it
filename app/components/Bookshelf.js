@@ -18,6 +18,7 @@ export default function Bookshelf ({ shelf, books, onMove }) {
               key={book.id}
               book={book}
               shelf={shelf.key}
+              onMove={onMove}
             />
           ))}
         </ol>
@@ -28,5 +29,6 @@ export default function Bookshelf ({ shelf, books, onMove }) {
 
 Bookshelf.propTypes = {
   shelf: PropTypes.object.isRequired,
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  onMove: PropTypes.func.isRequired
 }

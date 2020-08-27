@@ -7,6 +7,7 @@ export default function BookshelfChanger ({ book, shelf, onMove }) {
   const handleChange = (event) => {
     const { value } = event.target
     setShelfState(value)
+    console.log(book, value)
   }
 
   return (

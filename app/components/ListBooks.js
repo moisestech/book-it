@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Bookshelf from './Bookshelf'
 
-
-
 export default function ListBooks ({ bookshelves, books, onMove }) {
   return (
     <div className='list-books'>
@@ -19,6 +17,7 @@ export default function ListBooks ({ bookshelves, books, onMove }) {
             key={shelf.key}
             shelf={shelf}
             books={books}
+            onMove={onMove}
           />
         ))}
       </div>

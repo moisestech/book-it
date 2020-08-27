@@ -51,7 +51,7 @@ export default function Book ({ book, shelf, onMove }) {
           <BookshelfChanger
             book={book}
             shelf={shelf}
-            onMove={() => null}
+            onMove={onMove}
           />
         </div>
         <BookInfo
@@ -64,7 +64,7 @@ export default function Book ({ book, shelf, onMove }) {
 }
 
 Book.propTypes = {
-  book: PropTypes.object,
-  shelf: PropTypes.string,
-  // onMove: PropTypes.function
+  book: PropTypes.object.isRequired,
+  shelf: PropTypes.string.isRequired,
+  onMove: PropTypes.func.isRequired
 }
