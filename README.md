@@ -14,7 +14,6 @@ BookIt - search from a catalog of books and save choices to various books shelve
 
 ## Application Tree
 ```bash
-├── CONTRIBUTING.md
 ├── README.md - # This file.
 ├── package.json # npm package manager file.
 └── app
